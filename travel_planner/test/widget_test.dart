@@ -1,30 +1,36 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:travel_planner/main.dart';
+import 'package:travel_planner/login_screen.dart'; // Adjust the import as needed
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('LoginScreen has a logo, text fields, and buttons',
+      (WidgetTester tester) async {
+    // Build the LoginScreen widget.
+    await tester.pumpWidget(MaterialApp(home: LoginScreen()));
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify the logo is present.
+    expect(find.byType(Image), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Verify the text fields are present.
+    expect(find.byType(TextFormField), findsNWidgets(2));
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify the login button is present.
+    expect(find.text('Login'), findsOneWidget);
+
+    // Verify the Google login button is present.
+    expect(find.text('Google'), findsOneWidget);
+
+    // Verify the terms and conditions text is present.
+    expect(find.textContaining('By clicking continue'), findsOneWidget);
+
+    // Interact with the text fields and buttons.
+    await tester.enterText(find.byType(TextFormField).at(0), 'testuser');
+    await tester.enterText(find.byType(TextFormField).at(1), 'password');
+    await tester.tap(find.text('Login'));
+    await tester.pump(); // Rebuild the widget after the state has changed.
+
+    // Verify form validation.
+    expect(find.text('Please enter your name'), findsNothing);
+    expect(find.text('Please enter your password'), findsNothing);
   });
 }
