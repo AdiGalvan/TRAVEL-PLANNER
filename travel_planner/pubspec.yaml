@@ -39,7 +39,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  carousel_slider: ^4.0.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -57,7 +57,8 @@ flutter:
   assets:
     - assets/logotra.png
     - assets/googlel.png
-
+    - assets/avion.jpg
+    #- https://concepto.de/wp-content/uploads/2023/01/avion.jpg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

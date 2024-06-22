@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel_planner/login_screen.dart'; // Ensure this path is correct
+import 'package:travel_planner/login/login_screen.dart'; // Ensure this path is correct
+import '../Registro/Registro.dart';
+import 'Home/Home.dart';
 
 void main() {
   runApp(TravelPlannerApp());
