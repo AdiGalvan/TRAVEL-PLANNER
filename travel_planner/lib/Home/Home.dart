@@ -78,6 +78,9 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(100, 50), // Ancho y alto mínimo
+                    ),
                     onPressed: () {},
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -89,6 +92,9 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(100, 50), // Ancho y alto mínimo
+                    ),
                     onPressed: () {},
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -100,6 +106,9 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(100, 50), // Ancho y alto mínimo
+                    ),
                     onPressed: () {},
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -115,12 +124,12 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 16),
               // Trip images with descriptions
               Container(
-                height: 250, // Altura fija para todas las tarjetas de viaje
+                height: 350, // Altura fija para todas las tarjetas de viaje
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
                     TripCard(
-                      image: 'assets/trip_image1.jpg',
+                      image: 'assets/trip_image1.png',
                       title: 'Paris, Francia',
                       description: 'Explora la ciudad del amor y la luz',
                       rating: 4.5,
@@ -128,7 +137,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(width: 16),
                     TripCard(
-                      image: 'assets/trip_image2.jpg',
+                      image: 'assets/trip_image2.png',
                       title: 'Roma, Italia',
                       description:
                           'Descubre la historia y la arquitectura de la ciudad eterna',
@@ -137,7 +146,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(width: 16),
                     TripCard(
-                      image: 'assets/trip_image2.jpg',
+                      image: 'assets/trip_image3.png',
                       title: 'Barcelona, España',
                       description: 'Disfruta de la playa y la cultura catalana',
                       rating: 4.6,
@@ -153,24 +162,36 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(
+              Icons.search,
+              color: Colors.black87,
+            ),
             label: 'Buscar',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.access_time),
+            icon: Icon(
+              Icons.access_time,
+              color: Colors.black87,
+            ),
             label: 'Calendario',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.add),
+            icon: Icon(
+              Icons.add,
+              color: Colors.black87,
+            ),
             label: 'Agregar',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
+            icon: Icon(
+              Icons.favorite,
+              color: Colors.black87,
+            ),
             label: 'Favoritos',
           ),
           BottomNavigationBarItem(
             icon: CircleAvatar(
-              backgroundImage: AssetImage('assets/profile.jpg'),
+              backgroundImage: AssetImage('assets/avion.jpg'),
             ),
             label: 'Perfil',
           ),

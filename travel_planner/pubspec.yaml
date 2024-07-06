@@ -58,6 +58,10 @@ flutter:
     - assets/logotra.png
     - assets/googlel.png
     - assets/avion.jpg
+    - assets/logo.png
+    - assets/trip_image1.png
+    - assets/trip_image2.png
+    - assets/trip_image3.png
     #- https://concepto.de/wp-content/uploads/2023/01/avion.jpg
 
   # The following line ensures that the Material Icons font is

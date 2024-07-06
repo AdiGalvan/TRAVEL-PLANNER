@@ -91,9 +91,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   Image.asset(
-                    'assets/logotra.png',
-                    width: 150,
-                    height: 150,
+                    'assets/logo.png',
+                    width: 300,
+                    height: 300,
                   ),
                   SizedBox(height: 30),
                   // Campo de texto para el nombre

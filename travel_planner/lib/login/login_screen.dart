@@ -48,7 +48,7 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   // Logo at the top of the form.
                   Image.asset(
-                    'assets/logotra.png',
+                    'assets/logo.png',
                     width: 300,
                     height: 300,
                   ),
@@ -93,7 +93,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   // ElevatedButton to handle login action.
-                  /* ElevatedButton(
+                  /** ElevatedButton(
                     onPressed: () {
                       if (_formKey.currentState?.validate() == true) {
                         _navigateToHome(
@@ -142,9 +142,10 @@ class LoginScreen extends StatelessWidget {
                           TextSpan(
                             text: 'regístrate aquí.',
                             style: TextStyle(
-                              color: Colors.blue,
+                              color: Color.fromARGB(255, 255, 255, 255),
                               decoration: TextDecoration.underline,
-                              decorationColor: Colors.blue,
+                              decorationColor:
+                                  Color.fromARGB(255, 230, 230, 230),
                             ),
                           ),
                         ],
