@@ -3,6 +3,8 @@ import 'package:travel_planner/login_screen.dart'; // Ensure this path is correc
 import 'home_vuelos.dart';
 import 'home_hoteles.dart';
 
+import 'search_vuelo.dart';
+
 void main() {
   runApp(TravelPlannerApp());
 }
@@ -15,7 +17,7 @@ class TravelPlannerApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: HomeVuelo(),
     );
   }
 }
