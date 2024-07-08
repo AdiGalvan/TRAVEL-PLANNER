@@ -30,8 +30,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  sqflite: ^2.0.0+4
+  path: ^1.8.0
+=======
   carousel_slider: ^4.2.1
   intl: ^0.17.0
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -39,10 +44,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
+  carousel_slider: ^4.0.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -56,10 +58,17 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
   assets:
     - assets/logotra.png
     - assets/googlel.png
+
+    - assets/avion.jpg
+    - assets/logo.png
+    - assets/trip_image1.png
+    - assets/trip_image2.png
+    - assets/trip_image3.png
+    #- https://concepto.de/wp-content/uploads/2023/01/avion.jpg
+=======
     - assets/vuelos/vuelo1.jpg
     - assets/vuelos/vuelo2.jpg
     - assets/vuelos/vuelo3.jpg
@@ -75,10 +84,14 @@ flutter:
     
 
 
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
 
   # To add assets to your application, add an assets section, like this:
   # assets:

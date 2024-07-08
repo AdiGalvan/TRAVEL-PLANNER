@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:travel_planner/login_screen.dart'; // Adjust the import as needed
+import 'package:travel_planner/login/login_screen.dart'; // Adjust the import as needed
 
 void main() {
   testWidgets('LoginScreen has a logo, text fields, and buttons',
